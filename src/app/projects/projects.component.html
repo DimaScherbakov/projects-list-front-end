@@ -1,0 +1,6 @@
+
+  <ul>
+<li *ngFor="let project of projects" (click)="onSelected(project)"><p>{{project.name}}</p></li>
+</ul>
+
+<app-project [projInfo]="selectedProj"></app-project>
