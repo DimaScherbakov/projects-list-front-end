@@ -9,9 +9,9 @@ import { HttpService } from './http.service'
 })
 export class AppComponent {
   title = 'projects-list-front-end';
+ answer:any; // array that with answer from server
   constructor(private httpService: HttpService){
-  var resp = httpService.getData();
-  //for (var item in resp){console.log(resp[item])}
-  //console.log(resp);
+  this.httpService.getData().subscribe((data: any) => {this.answer=data;},
+                    error => console.log(error));
   }
 }
