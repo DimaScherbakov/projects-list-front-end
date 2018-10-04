@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Project } from '../project-model'
+import { Project } from '../project-model';
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
