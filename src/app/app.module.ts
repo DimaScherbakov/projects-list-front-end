@@ -9,6 +9,8 @@ import { ProjectComponent } from './project/project.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { LoginComponent } from './login/login.component';
 
+import { MzButtonModule, MzInputModule } from 'ngx-materialize';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MzButtonModule,
+    MzInputModule,
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

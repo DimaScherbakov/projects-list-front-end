@@ -13,12 +13,12 @@ export class ProjectsComponent implements OnInit {
 projects:any;
 selectedProj: Project;
 
-  constructor(private httpService: HttpService){
+  constructor(private httpService: HttpService){ }
+
+  ngOnInit() {
   this.httpService.getProjects().subscribe((data: any) => {this.projects=data;console.log(this.projects);},
                     error => console.log(error));
  }
-
-  ngOnInit() { }
 
   onSelected(project: Project):void{
 this.selectedProj = project;

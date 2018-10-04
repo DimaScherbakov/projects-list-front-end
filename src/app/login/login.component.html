@@ -1,12 +1,14 @@
-<div class="form-group">
-                    <label>Имя</label>
+<div class="row">
+<div class="form-group col s4">
+                    <label>Name</label>
                     <input name="name" [(ngModel)]="user.name" />
-                </div>
-                <div class="form-group">
-                    <label>Пароль</label>
-                    <input name="pass" [(ngModel)]="user.pass" />
-                </div>
-                <div class="form-group">
-                    <button (click)="submit(user)">Отправить</button>
-                </div>
+</div>
+ <div class="form-group col s4">
+                    <label>Password</label>
+                    <input name="pass" type="password" [(ngModel)]="user.pass" />
+</div>
+<div class="form-group col s4">
+                    <button class="waves-effect waves-light btn" (click)="submit(user)">Login</button>
+</div>
+</div>
 <div *ngIf="isDone">Hello, {{name}}</div>

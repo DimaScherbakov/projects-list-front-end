@@ -1,6 +1,6 @@
-
-  <ul>
-<li *ngFor="let project of projects" (click)="onSelected(project)"><p>{{project.name}}</p></li>
-</ul>
-
-<app-project [projInfo]="selectedProj"></app-project>
+ <div class="collection">
+<a href="#" *ngFor="let project of projects" (click)="onSelected(project)" class="collection-item">
+{{project.name}}
+</a>
+</div>
+<div class="card-panel teal lighten-2"><app-project [projInfo]="selectedProj" ></app-project></div>
