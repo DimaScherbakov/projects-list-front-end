@@ -8,7 +8,8 @@ import { Project } from '../project-model';
 export class ProjectComponent implements OnInit {
 
 @Input() projInfo: Project;
-
+//condition: boolean = true;
+condition:boolean = this.projInfo.update;
   constructor() { }
 
   ngOnInit() {

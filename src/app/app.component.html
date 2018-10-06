@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col s6 offset-s3" >
-		<app-login></app-login>
-		<app-projects></app-projects>
+		<app-login (onChanged)="onChanged($event)"></app-login>
+		<app-projects [needProjects]="needProjects"></app-projects>
 	</div>
 </div>
