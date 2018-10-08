@@ -18,8 +18,7 @@ isDone: boolean = false;
 projectsURL: boolean = true;
 
   constructor(private httpService: HttpService) { }
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   setProjectsURL(){
 	this.projectsURL= this.projectsURL == true ? false : true;
@@ -33,4 +32,5 @@ projectsURL: boolean = true;
                     error => console.log(error)
                 );
 }
+
 }

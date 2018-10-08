@@ -11,9 +11,10 @@ import { LoginComponent } from './login/login.component';
 import { MzButtonModule, MzInputModule } from 'ngx-materialize';
 
 import {Routes, RouterModule} from '@angular/router';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes =[
-    { path: 'projects' , component: ProjectsComponent },
+    { path: 'profile' , component: ProfileComponent },
     { path: '', component: ProjectsComponent}
     //{ path: '**', component: NotFoundComponent }
 ];
@@ -23,7 +24,8 @@ const appRoutes: Routes =[
     AppComponent,
     ProjectComponent,
     ProjectsComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
