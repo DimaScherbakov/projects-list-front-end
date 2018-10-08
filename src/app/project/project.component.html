@@ -1,4 +1,4 @@
 <p>
   {{projInfo.desc}}
 </p>
-<p>{{projInfo.update}}</p>
+<p *ngIf="projInfo.update==true"><button class="btn  waves-effect waves-light grey">Update</button></p>
