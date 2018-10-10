@@ -1,21 +1,14 @@
 <div class="row">
-<div class="form-group col s4">
+<div class="form-group col s3">
                     <label>Name</label>
                     <input name="name" [(ngModel)]="user.name" />
 </div>
- <div class="form-group col s4">
+ <div class="form-group col s3">
                     <label>Password</label>
                     <input name="pass" type="password" [(ngModel)]="user.pass" />
 </div>
-<div class="form-group col s4">
+<div class="form-group col s6">
                   <a routerLink="profile" class="waves-effect waves-light btn" (click)="submit(user);setProjectsURL()">Login</a>
-
-</div>
-</div>
-<div *ngIf="isDone">
-      <div class="card grey">
-        <div class="card-content white-text row">
-          <span class="card-title col offset-s3 s6">Hello,{{user.name}}</span>
-        </div>
+		  <a routerLink="registration" class="red btn" (click)="registrate(user);setProjectsURL()">Registration</a>
 </div>
 </div>

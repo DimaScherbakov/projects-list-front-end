@@ -11,9 +11,7 @@ name:string;
   constructor(private userNameServ: UserNameService) { }
 
   ngOnInit() {
-    this.userNameServ.change.subscribe( name => {
-      this.name = name;
-});	
+	this.userNameServ.
   }
 
 }
