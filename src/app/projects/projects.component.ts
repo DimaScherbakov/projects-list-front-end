@@ -14,21 +14,24 @@ projects:any;
 selectedProj: Project;
 @Input() needProjects:boolean;
 oldNeedProjects:boolean=false;
-  constructor(private httpService: HttpService){}
+  constructor(private httpService: HttpService){
+  this.httpService.getProjects().subscribe((data: any) => {this.projects=data;console.log(this.projects);},
+                    error => console.log(error));
+}
 
   ngOnInit() {
-  //this.httpService.getProjects().subscribe((data: any) => {console.log("!!!!!!!!!!!!!!!!");this.projects=data;console.log(this.projects);},
-                    //error => console.log(error));
+  //this.httpService.getProjects().subscribe((data: any) => {this.projects=data;console.log(this.projects);},
+  //                  error => console.log(error));
  }
 
   onSelected(project: Project):void{
 this.selectedProj = project;
  }
-ngDoCheck(){
-if(this.oldNeedProjects!=this.needProjects && this.needProjects!=undefined){
-	this.oldNeedProjects=!(this.oldNeedProjects);
-	this.httpService.getProjects().subscribe((data: any) => {this.projects=data;console.log(this.projects);},
-                  error => console.log(error));
-}
-}
+//ngDoCheck(){
+//if(this.oldNeedProjects!=this.needProjects && this.needProjects!=undefined){
+//	this.oldNeedProjects=!(this.oldNeedProjects);
+//	this.httpService.getProjects().subscribe((data: any) => {this.projects=data;console.log(this.projects);},
+//                  error => console.log(error));
+//}
+//}
 }

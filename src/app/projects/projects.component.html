@@ -1,5 +1,5 @@
  <div class="collection">
-<a href="#" *ngFor="let project of projects" (click)="onSelected(project)" class="collection-item">
+<a *ngFor="let project of projects" (click)="onSelected(project)" class="collection-item">
 {{project.name}}
 </a>
 </div>

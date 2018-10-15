@@ -9,7 +9,7 @@ export class ProjectComponent implements OnInit {
 
 @Input() projInfo: Project;
 //condition: boolean = true;
-condition:boolean = this.projInfo.update;
+//condition:boolean = projInfo.update;
   constructor() { }
 
   ngOnInit() {

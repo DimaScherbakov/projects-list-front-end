@@ -2,4 +2,5 @@
   {{projInfo.desc}}
 {{projInfo.update}}
 </p>
-<p><button class="btn">Update project</button></p>
+<p *ngIf="projInfo.update==true"><button class="btn  waves-effect waves-light grey">Update</button></p>
+
